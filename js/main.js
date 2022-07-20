@@ -85,15 +85,13 @@ posts.forEach(post => {
     let qualcosa = post.author;
 
     const {name, image} = qualcosa;
-    console.log(name, image);
-
-    let customAlt;
 
     if (image == null) {
         customAlt = "?";
     } else {
         customAlt = name;
     }
+
 
     containerDom.innerHTML += 
     `<div class="post">
@@ -127,3 +125,4 @@ posts.forEach(post => {
         </div>            
     </div>`;
 });
+
