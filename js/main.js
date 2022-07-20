@@ -56,6 +56,7 @@ const posts = [
     }
 ];
 
+
 const dataOggi = new Date('2022 07 20');
 const meseOggi = dataOggi.getMonth() + 1;
 const annoOggi = dataOggi.getFullYear();
@@ -81,15 +82,28 @@ posts.forEach(post => {
         meseDinamico = "mesi";
     }
 
+    let qualcosa = post.author;
+
+    const {name, image} = qualcosa;
+    console.log(name, image);
+
+    let customAlt;
+
+    if (image == null) {
+        customAlt = "?";
+    } else {
+        customAlt = name;
+    }
+
     containerDom.innerHTML += 
     `<div class="post">
         <div class="post__header">
             <div class="post-meta">                    
                 <div class="post-meta__icon">
-                    <img class="profile-pic" src="https://unsplash.it/300/300?image=15" alt="Phil Mangione">                    
+                    <img class="profile-pic" src=${image} alt="${customAlt}">                    
                 </div>
                 <div class="post-meta__data">
-                    <div class="post-meta__author">Phil Mangione</div>
+                    <div class="post-meta__author">${name}</div>
                     <div class="post-meta__time">${differenzaAnni} anno e ${differenzaMesi} ${meseDinamico} fa</div>
                 </div>                    
             </div>
