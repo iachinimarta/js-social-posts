@@ -60,16 +60,17 @@ const containerDom = document.getElementById('container');
 
 posts.forEach(post => {
 
+
     containerDom.innerHTML += 
     `<div class="post">
         <div class="post__header">
             <div class="post-meta">                    
                 <div class="post-meta__icon">
-                    <img class="profile-pic" src=${image} alt="${customAlt}">                    
+                    <img class="profile-pic" src=${post.author.image} alt="${"?"}">                    
                 </div>
                 <div class="post-meta__data">
-                    <div class="post-meta__author">${name}</div>
-                    <div class="post-meta__time">${differenzaAnni} anno e ${differenzaMesi} ${meseDinamico} fa</div>
+                    <div class="post-meta__author">${post.author.name}</div>
+                    <div class="post-meta__time">${post.created}</div>
                 </div>                    
             </div>
         </div>

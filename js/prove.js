@@ -19,12 +19,4 @@ if (differenzaMesi < 0) {
     meseDinamico = "mesi";
 }
 
-let qualcosa = post.author;
 
-const {name, image} = qualcosa;
-
-if (image == null) {
-    customAlt = "?";
-} else {
-    customAlt = name;
-}
